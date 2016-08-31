@@ -1,0 +1,25 @@
+{
+  "name": "lambda-table-of-contents",
+  "version": "1.0.0",
+  "description": "Lambda function to generate a table of contents from a HTML file",
+  "main": "index",
+  "scripts": {
+    "test": 0
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/legalthings/lambda-table-of-contents.git"
+  },
+  "author": "LegalThings",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/legalthings/lambda-table-of-contents/issues"
+  },
+  "homepage": "https://github.com/legalthings/lambda-table-of-contents#readme",
+  "dependencies": {
+    "table-of-contents-json": "^1.0.1"
+  },
+  "devDependencies": {
+    "node-lambda": "^0.8.7"
+  }
+}
