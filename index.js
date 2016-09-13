@@ -4,18 +4,16 @@ const TOC = require('table-of-contents-json');
 const toc = new TOC;
 
 exports.handler = (event, context, callback) => {
-    let documents = [];
-
-    if (!event || typeof event !== 'object') {
-        return callback('Context must be an object');
+    if (!event || typeof event !== 'string') {
+        return callback('Context must be a string');
     }
 
-    if (!event.html) {
-        return callback('Context must contain an "html" property');
+    if (event.indexOf('[ table of contents ]') === -1) {
+        return callback('Context must contain a "[ table of contents ]" placeholder');
     }
 
-    const json = toc.generateJSON(event.html);
-    const result = toc.generateHTML(json, event.base);
+    const json = toc.generateJSON(event);
+    const result = toc.generateHTML(json, event);
 
     callback(null, result);
 }
