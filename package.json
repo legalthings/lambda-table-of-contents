@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/legalthings/lambda-table-of-contents#readme",
   "dependencies": {
-    "table-of-contents-json": "^1.1.0"
+    "table-of-contents-json": "^1.1.1"
   },
   "devDependencies": {
     "node-lambda": "^0.8.7"
