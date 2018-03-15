@@ -9,7 +9,8 @@ exports.handler = (event, context, callback) => {
     }
 
     if (event.html.indexOf('[ table of contents ]') === -1) {
-        return callback('Context must contain a "[ table of contents ]" placeholder');
+        console.log('Context must contain a "[ table of contents ]" placeholder');
+        return callback(null, event.html);
     }
 
     const json = toc.generateJSON(event.html, event.options);
